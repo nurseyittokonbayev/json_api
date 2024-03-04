@@ -1,12 +1,6 @@
 import 'package:go_router/go_router.dart';
-import 'package:json_api/screens/albums_screen.dart';
-import 'package:json_api/screens/comments_screen.dart';
 import 'package:json_api/screens/home_screen.dart';
-import 'package:json_api/screens/photos_screen.dart';
 import 'package:json_api/screens/posts_screen.dart';
-import 'package:json_api/screens/users.screen.dart';
-
-import '../screens/todos_screen.dart';
 
 final goRouter = GoRouter(
   routes: [
@@ -20,31 +14,31 @@ final goRouter = GoRouter(
             path: 'posts',
             builder: (context, state) => const PostsScreen(),
           ),
-          GoRoute(
-            name: 'comments',
-            path: 'comments',
-            builder: (context, state) => const CommentsScreen(),
-          ),
-          GoRoute(
-            name: 'albums',
-            path: 'albums',
-            builder: (context, state) => const AlbumsScreen(),
-          ),
-          GoRoute(
-            name: 'photos',
-            path: 'photos',
-            builder: (context, state) => const PhotosScreen(),
-          ),
-          GoRoute(
-            name: 'todos',
-            path: 'todos',
-            builder: (context, state) => const TodosScreen(),
-          ),
-          GoRoute(
-            name: 'users',
-            path: 'users',
-            builder: (context, state) => const UsersScreen(),
-          ),
+          // GoRoute(
+          //   name: 'comments',
+          //   path: 'comments',
+          //   builder: (context, state) => const CommentsScreen(),
+          // ),
+          // GoRoute(
+          //   name: 'albums',
+          //   path: 'albums',
+          //   builder: (context, state) => const AlbumsScreen(),
+          // ),
+          // GoRoute(
+          //   name: 'photos',
+          //   path: 'photos',
+          //   builder: (context, state) => const PhotosScreen(),
+          // ),
+          // GoRoute(
+          //   name: 'todos',
+          //   path: 'todos',
+          //   builder: (context, state) => const TodosScreen(),
+          // ),
+          // GoRoute(
+          //   name: 'users',
+          //   path: 'users',
+          //   builder: (context, state) => const UsersScreen(),
+          // ),
         ]),
   ],
 );
