@@ -1,6 +1,7 @@
 import 'package:go_router/go_router.dart';
+import 'package:json_api/feature/users/presentation/pages/users.screen.dart';
 import 'package:json_api/screens/home_screen.dart';
-import 'package:json_api/screens/posts_screen.dart';
+import 'package:json_api/feature/posts/presentation/pages/posts_screen.dart';
 
 final goRouter = GoRouter(
   routes: [
@@ -34,11 +35,11 @@ final goRouter = GoRouter(
           //   path: 'todos',
           //   builder: (context, state) => const TodosScreen(),
           // ),
-          // GoRoute(
-          //   name: 'users',
-          //   path: 'users',
-          //   builder: (context, state) => const UsersScreen(),
-          // ),
+          GoRoute(
+            name: 'users',
+            path: 'users',
+            builder: (context, state) => const UsersScreen(),
+          ),
         ]),
   ],
 );

@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:json_api/feature/posts/presentation/cubit/post_cubit.dart';
+import 'package:json_api/feature/users/presentation/cubit/user_cubit.dart';
 import 'package:json_api/router/go_router_config.dart';
 import 'server_locator.dart' as di;
 
@@ -16,8 +17,15 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final router = goRouter;
-    return BlocProvider(
-      create: (context) => di.sl<PostCubit>()..fetchPosts(),
+    return MultiBlocProvider(
+      providers: [
+        BlocProvider(
+          create: (context) => di.sl<PostCubit>()..fetchPosts(),
+        ),
+        BlocProvider(
+          create: (context) => di.sl<UserCubit>()..fetchUsers(),
+        ),
+      ],
       child: MaterialApp.router(
         title: 'Flutter Demo',
         theme: ThemeData(
